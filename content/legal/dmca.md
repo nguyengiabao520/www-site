@@ -1,5 +1,6 @@
 Title: ASF Legal Digital Millenium Copyright Act Designated Agent
 license: https://www.apache.org/licenses/LICENSE-2.0
+Tags: legal
 
 # The ASF DMCA Designated Agent
 

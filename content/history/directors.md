@@ -1,5 +1,5 @@
 Title: ASF Board of Directors Timeline
-
+Tags: history
 license: https://www.apache.org/licenses/LICENSE-2.0
 
 # {{title}}

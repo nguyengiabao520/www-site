@@ -13,6 +13,9 @@ plugins:
   use:
     - gfm
     - asfindex
+    - asfpagetags
+  paths:
+    - theme/plugins
 
 setup:
   data: asfdata.yaml

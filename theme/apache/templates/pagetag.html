@@ -1,0 +1,10 @@
+<!-- Template runs against a generated page -->
+{% extends "base.html" %}
+{% block content %}
+<h2>Pages tagged with {{ page.title }}</h1>
+<ul>
+    {% for p in page.taggedpages %}
+    <li><a href="{{ p.save_as }}">{{ p.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

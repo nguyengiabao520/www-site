@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>List of page tags</h1>
+    <ul>
+    {% for tag in page.pagetags %}
+        <li><a href="/_{{ tag }}">{{ tag }}</a> ({{ page.pagetags[tag]|count }})</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+

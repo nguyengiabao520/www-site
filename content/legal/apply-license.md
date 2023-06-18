@@ -1,4 +1,5 @@
 Title: Applying the Apache license, version 2.0
+Tags: legal
 
 This document is to help Apache developers understand what they need to do to apply the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a> or _ALv2_ to Apache software, including source code, documentation, and binary distributions. It is descriptive guidance, and does not supplant or otherwise modify any of the terms within the license itself. In case of uncertainty, consult <a href="https://www.apache.org/legal" target="_blank">general Apache policy</a>.
 

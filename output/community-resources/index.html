@@ -26,7 +26,7 @@
   <meta name="msapplication-config" content="/favicons/browserconfig.xml">
   <meta name="theme-color" content="#282661">
 
-  <title>ASF Project Security Information</title>
+  <title>Community Connect & Mentor | Apache Software Foundation</title>
   <link href="/css/Montserrat-300-600.css" rel="stylesheet">
   <link href="/css/min.bootstrap.css" rel="stylesheet">
   <link href="/css/styles.css" rel="stylesheet">
@@ -37,6 +37,15 @@
 dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
   visibility: visible
 }  </style>
+
+  <!-- pagefind search -->
+  <link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#pagefind-search" });
+    });
+  </script>
 
 <!-- https://www.apache.org/licenses/LICENSE-2.0 -->
 </head>
@@ -65,7 +74,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
                 <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
                 <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-                <li><a href="/connect/">Connect & Mentor</a></li>
+                <li><a href="/community-resources/">Community Resources</a></li>
                 <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
                 <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
                 <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -75,28 +84,38 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Projects&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
+                <li><a href="https://incubator.apache.org/" target="_blank">Incubator Projects</a></li>
                 <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-                <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-                <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+                <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
                 <li><a href="/security">Report a Vulnerability</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Downloads&nbsp;<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+                <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+                <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+                <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Learn&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-                <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-                <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+                <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+                <li><a href="/theapacheway/">The Apache Way</a></li>
                 <li><a href="/legal/">Legal &amp; Trademark</a></li>
+                <li><a href="/foundation/marks/">Trademark Policy</a></li>
                 <li><a href="/licenses">Licenses</a></li>
-                <li><a href="/foundation/glossary.html">Glossary</a></li>
+                <li><a href="/foundation/glossary">Glossary</a></li>
                 <li><a href="/foundation/faq">FAQ</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Resources &amp; Tools&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
+                <li><a href="/dev/">Developer Information</a></li>
                 <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
                 <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
                 <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -114,10 +133,10 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="/foundation/sponsors">Our Sponsors</a></li>
                 <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
                 <li><a href="/foundation/leadership">Leadership</a></li>
-                <li><a href="/foundation/members.html">Members</a></li>
+                <li><a href="/foundation/members">Members</a></li>
                 <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
                 <li><a href="/press/">Newsroom</a></li>
-                <li><a href="/foundation/contact.html">Contact</a></li>
+                <li><a href="/foundation/contact">Contact</a></li>
               </ul>
             </li>
             
@@ -128,10 +147,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                   aria-hidden="true"></span><span class="sr-only">Search</span></a>
               <ul class="dropdown-menu search-form" role="search">
                 <li>
-                  <div class="input-group" style="width: 100%; padding: 0 5px;">
-                    <script async src="https://cse.google.com/cse.js?cx=cb41d2753d228d8b7"></script>
-                    <div class="gcse-search"></div>
-                  </div>
+                  <div id="pagefind-search" class="input-group" style="width: 100%; padding: 0 5px;"></div>
                 </li>
               </ul>
             </li>
@@ -156,209 +172,59 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
  
   </header>
   <main id="maincontent">
-<div class="container">    <h1 id="asf-project-security-information">ASF Project Security Information<a class="headerlink" href="#asf-project-security-information" title="Permalink">&para;</a></h1>
-<p>Here is a list of pages ASF projects maintain to provide information on known security vulnerabilities. Each entry also has the security contact for reporting new
-vulnerabilities related to that project. Note that not all project security teams have a dedicated address for reporting new vulnerabilities.</p>
-<p>To report a vulnerability in an Apache project that is not listed below, contact the <a href="mailto:security@apache.org">Apache Security Team</a>.</p>
+<div class="container">    <h1 id="community-resources">Community Resources<a class="headerlink" href="#community-resources" title="Permalink">&para;</a></h1>
+<p>Your Awesome List of community programs and resources.</p>
 <table class="table">
 <thead>
 <tr>
-<th>Security page</th>
-<th>Security Contact</th>
+<th>Resource</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://apr.apache.org/security_report.html">Apache Portable Runtime (APR)</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
+<td><a href="https://apache.org/foundation/policies/conduct">ASF Code of Conduct</a></td>
+<td>We expect everyone who participates to honor our code of conduct.</td>
 </tr>
 <tr>
-<td>Apache Ambari</td>
-<td><a href="mailto:security@ambari.apache.org">Apache Ambari Security Team</a></td>
+<td><a href="https://people.apache.org/">ASF Committer Directory</a></td>
+<td>An index of projects and committers for every ASF project.</td>
 </tr>
 <tr>
-<td><a href="https://ant.apache.org/security.html">Apache Ant</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
+<td><a href="https://cwiki.apache.org/confluence/display/COMDEV/Apache+Local+Community+-+ALC">Apache Local Community (ALC)</a></td>
+<td>ALCs are local groups of ASF / open source enthusiasts in towns/cities around the world.</td>
 </tr>
 <tr>
-<td><a href="https://camel.apache.org/security/">Apache Camel</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
+<td><a href="https://communityovercode.org/">Community Over Code</a></td>
+<td>ASF&rsquo;s flagship community event in North America, Europe, and Asia.</td>
 </tr>
 <tr>
-<td><a href="https://cloudstack.apache.org/security.html">Apache CloudStack</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
+<td><a href="https://events.apache.org/">Community Events</a></td>
+<td>Calendar of upcoming community and ASF events.</td>
 </tr>
 <tr>
-<td><a href="https://commons.apache.org/security.html">Apache Commons</a></td>
-<td><a href="mailto:security@commons.apache.org">Apache Commons Security Team</a></td>
+<td><a href="https://community.apache.org/">Contributor Getting Started</a></td>
+<td>The best place to learn how to get started contributing to ASF projects.</td>
 </tr>
 <tr>
-<td>Apache CouchDB</td>
-<td><a href="mailto:security@couchdb.apache.org">Apache CouchDB Security Team</a></td>
+<td><a href="https://community.apache.org/contributors/">Committer Getting Started</a></td>
+<td>Details on how to move from Contributor to Committer.</td>
 </tr>
 <tr>
-<td><a href="https://druid.apache.org/docs/latest/operations/security-overview.html">Apache Druid</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
+<td><a href="https://community.apache.org/gsoc/">Google Summer of Code (GSoC)</a></td>
+<td>A global, online mentoring program focused on introducing new contributors to open source software development. ASF is registered as a mentoring organization for GSoC.</td>
 </tr>
 <tr>
-<td><a href="https://cwiki.apache.org/confluence/display/FINERACT/Apache+Fineract+Security+Report">Apache Fineract</a></td>
-<td><a href="mailto:security@fineract.apache.org">Apache Fineract Security Team</a></td>
+<td><a href="https://community.apache.org/mentoring/">Mentoring</a></td>
+<td>Mentoring is the process of actively bringing someone along in a discipline - investing your time into influencing the future.</td>
 </tr>
 <tr>
-<td><a href="https://geronimo.apache.org/security-reports.html">Apache Geronimo</a></td>
-<td><a href="mailto:security@geronimo.apache.org">Apache Geronimo Security Team</a></td>
+<td><a href="https://www.redbubble.com/people/comdev/shop">Store</a></td>
+<td>Get swag and show your support for your favorite ASF projects!</td>
 </tr>
 <tr>
-<td><a href="https://guacamole.apache.org/security/">Apache Guacamole</a></td>
-<td><a href="mailto:security@guacamole.apache.org">Apache Guacamole Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://hadoop.apache.org/mailing_lists.html">Apache Hadoop</a></td>
-<td><a href="mailto:security@hadoop.apache.org">Apache Hadoop Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://hive.apache.org/mailing_lists.html">Apache Hive</a></td>
-<td><a href="mailto:security@hive.apache.org">Apache Hive Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://httpd.apache.org/security_report.html">Apache HTTP Server</a></td>
-<td><a href="mailto:security@httpd.apache.org">Apache HTTP Server Security Team</a></td>
-</tr>
-<tr>
-<td>Apache Ignite</td>
-<td><a href="mailto:security@ignite.apache.org">Apache Ignite Security Team</a></td>
-</tr>
-<tr>
-<td>Apache Jackrabbit</td>
-<td><a href="mailto:security@jackrabbit.apache.org">Apache Jackrabbit Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://jmeter.apache.org/security.html">Apache JMeter</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://kafka.apache.org/project-security.html">Apache Kafka</a></td>
-<td><a href="mailto:security@kafka.apache.org">Apache Kafka Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://libcloud.apache.org/security.html">Apache Libcloud</a></td>
-<td><a href="mailto:security@libcloud.apache.org">Apache Libcloud Security Team</a></td>
-</tr>
-<tr>
-<td>Apache Logging</td>
-<td><a href="mailto:security@logging.apache.org">Apache Logging Security Team</a></td>
-</tr>
-<tr>
-<td>Apache Lucene</td>
-<td><a href="mailto:security@lucene.apache.org">Apache Lucene Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://maven.apache.org/security.html">Apache Maven</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
-</tr>
-<tr>
-<td>Apache Metron</td>
-<td><a href="mailto:security@metron.apache.org">Apache Metron Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://nifi.apache.org/security.html">Apache NiFi</a></td>
-<td><a href="mailto:security@nifi.apache.org">Apache NiFi Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://ofbiz.apache.org/download.html#security">Apache OFBiz</a></td>
-<td><a href="mailto:security@ofbiz.apache.org">Apache OFBiz Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://openmeetings.apache.org/security.html">Apache OpenMeetings</a></td>
-<td><a href="mailto:security@openmeetings.apache.org">Apache OpenMeetings Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://openoffice.apache.org/security">Apache OpenOffice</a></td>
-<td><a href="mailto:security@openoffice.apache.org">Apache OpenOffice Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://orc.apache.org/security/">Apache ORC</a></td>
-<td><a href="mailto:security@orc.apache.org">Apache ORC Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://pdfbox.apache.org/security.html">Apache PDFBox</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://github.com/apache/pulsar/security/policy">Apache Pulsar</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://santuario.apache.org/secadv.html">Apache Santuario</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://cwiki.apache.org/confluence/display/SENTRY/Vulnerabilities+found+in+Apache+Sentry">Apache Sentry</a></td>
-<td><a href="mailto:security@sentry.apache.org">Apache Sentry Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://shardingsphere.apache.org/community/en/security/">Apache ShardingSphere</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://shiro.apache.org/security-reports.html">Apache Shiro</a></td>
-<td><a href="mailto:security@shiro.apache.org">Apache Shiro Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://singa.apache.org/security.html">Apache SINGA</a></td>
-<td><a href="mailto:security@singa.apache.org">Apache SINGA Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://sling.apache.org/site/security.html">Apache Sling</a></td>
-<td><a href="mailto:security@sling.apache.org">Apache Sling Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://cwiki.apache.org/confluence/display/SOLR/SolrSecurity">Apache Solr</a></td>
-<td><a href="mailto:security@solr.apache.org">Apache Solr Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://cwiki.apache.org/confluence/display/SPAMASSASSIN/SecurityPolicy">Apache SpamAssassin</a></td>
-<td><a href="mailto:security@spamassassin.apache.org">Apache SpamAssassin Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://spark.apache.org/security.html">Apache Spark</a></td>
-<td><a href="mailto:security@spark.apache.org">Apache Spark Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://struts.apache.org/security.html">Apache Struts</a></td>
-<td><a href="mailto:security@struts.apache.org">Apache Struts Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://subversion.apache.org/security/">Apache Subversion</a></td>
-<td><a href="mailto:security@subversion.apache.org">Apache Subversion Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://tomcat.apache.org/security.html">Apache Tomcat</a></td>
-<td><a href="mailto:security@tomcat.apache.org">Apache Tomcat Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://trafficcontrol.apache.org/security/index.html">Apache Traffic Control</a></td>
-<td><a href="mailto:security@trafficcontrol.apache.org">Apache Traffic Control Security Team</a></td>
-</tr>
-<tr>
-<td>Apache Traffic Server</td>
-<td><a href="mailto:security@trafficserver.apache.org">Apache Traffic Server Security Team</a></td>
-</tr>
-<tr>
-<td>Apache Trafodion</td>
-<td><a href="mailto:security@trafodion.apache.org">Apache Trafodion Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://xmlgraphics.apache.org/security.html">Apache XML Graphics</a></td>
-<td><a href="mailto:security@apache.org">Apache Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://zeppelin.apache.org/security.html">Apache Zeppelin</a></td>
-<td><a href="mailto:security@zeppelin.apache.org">Apache Zeppelin Security Team</a></td>
-</tr>
-<tr>
-<td><a href="https://zookeeper.apache.org/security.html">Apache ZooKeeper</a></td>
-<td><a href="mailto:security@zookeeper.apache.org">Apache ZooKeeper Security Team</a></td>
+<td><a href="https://tac.apache.org/">Travel Assistance</a></td>
+<td>ASF provides financial assistance to those who would otherwise be unable to attend various Community Over Code events.</td>
 </tr></tbody></table>
 
 </div>  </main>
@@ -368,16 +234,13 @@ vulnerabilities related to that project. Note that not all project security team
     <div class="container">
       <div class="row">
         <br />
-        <div class="col-sm-1">
-
-        </div>
         <div class="col-sm-2">
           <h5 class="white">Community</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
             <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
             <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-            <li><a href="/connect/">Connect & Mentor</a></li>
+            <li><a href="/community-resources/">Community Resources</a></li>
             <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
             <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
             <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -390,9 +253,17 @@ vulnerabilities related to that project. Note that not all project security team
               <li><a href="/projects">Projects</a></li>
               <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
               <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-              <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-              <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+              <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
               <li><a href="/security">Report a Vulnerability</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5 class="white">Downloads</h5>
+          <ul class="list-unstyled white" role="menu">
+            <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+            <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+            <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+            <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
           </ul>
         </div>
 
@@ -400,11 +271,12 @@ vulnerabilities related to that project. Note that not all project security team
           <h5 class="white">Learn</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-            <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-            <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+            <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+            <li><a href="/theapacheway/">The Apache Way</a></li>
             <li><a href="/legal/">Legal &amp; Trademark</a></li>
+            <li><a href="/foundation/marks/">Trademark Policy</a></li>
             <li><a href="/licenses">Licenses</a></li>
-            <li><a href="/foundation/glossary.html">Glossary</a></li>
+            <li><a href="/foundation/glossary">Glossary</a></li>
             <li><a href="/foundation/faq">FAQ</a></li>
           </ul>
         </div>
@@ -412,6 +284,7 @@ vulnerabilities related to that project. Note that not all project security team
         <div class="col-sm-2">
           <h5 class="white">Resources &amp; Tools</h5>
           <ul class="list-unstyled white" role="menu">
+              <li><a href="/dev/">Developer Information</a></li>
               <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
               <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
               <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -430,15 +303,14 @@ vulnerabilities related to that project. Note that not all project security team
             <li><a href="/foundation/sponsors">Our Sponsors</a></li>
             <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
             <li><a href="/foundation/leadership">Leadership</a></li>
-            <li><a href="/foundation/members.html">Members</a></li>
+            <li><a href="/foundation/members">Members</a></li>
             <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
             <li><a href="/press/">Newsroom</a></li>
-            <li><a href="/foundation/contact.html">Contact</a></li>
+            <li><a href="/foundation/contact">Contact</a></li>
+            <li><a href="https://privacy.apache.org/policies/privacy-policy-public.html" target="_blank">Privacy Policy</a></li>
           </ul>
         </div>
 
-        <div class="col-sm-1">
-        </div>
 
       </div>
       <hr class="col-lg-12 hr-white" />

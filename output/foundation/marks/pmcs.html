@@ -38,6 +38,15 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
   visibility: visible
 }  </style>
 
+  <!-- pagefind search -->
+  <link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#pagefind-search" });
+    });
+  </script>
+
 <!-- https://www.apache.org/licenses/LICENSE-2.0 -->
 </head>
 
@@ -65,7 +74,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
                 <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
                 <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-                <li><a href="/connect/">Connect & Mentor</a></li>
+                <li><a href="/community-resources/">Community Resources</a></li>
                 <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
                 <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
                 <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -75,28 +84,38 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Projects&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
+                <li><a href="https://incubator.apache.org/" target="_blank">Incubator Projects</a></li>
                 <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-                <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-                <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+                <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
                 <li><a href="/security">Report a Vulnerability</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Downloads&nbsp;<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+                <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+                <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+                <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Learn&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-                <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-                <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+                <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+                <li><a href="/theapacheway/">The Apache Way</a></li>
                 <li><a href="/legal/">Legal &amp; Trademark</a></li>
+                <li><a href="/foundation/marks/">Trademark Policy</a></li>
                 <li><a href="/licenses">Licenses</a></li>
-                <li><a href="/foundation/glossary.html">Glossary</a></li>
+                <li><a href="/foundation/glossary">Glossary</a></li>
                 <li><a href="/foundation/faq">FAQ</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Resources &amp; Tools&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
+                <li><a href="/dev/">Developer Information</a></li>
                 <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
                 <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
                 <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -114,10 +133,10 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="/foundation/sponsors">Our Sponsors</a></li>
                 <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
                 <li><a href="/foundation/leadership">Leadership</a></li>
-                <li><a href="/foundation/members.html">Members</a></li>
+                <li><a href="/foundation/members">Members</a></li>
                 <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
                 <li><a href="/press/">Newsroom</a></li>
-                <li><a href="/foundation/contact.html">Contact</a></li>
+                <li><a href="/foundation/contact">Contact</a></li>
               </ul>
             </li>
             
@@ -128,10 +147,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                   aria-hidden="true"></span><span class="sr-only">Search</span></a>
               <ul class="dropdown-menu search-form" role="search">
                 <li>
-                  <div class="input-group" style="width: 100%; padding: 0 5px;">
-                    <script async src="https://cse.google.com/cse.js?cx=cb41d2753d228d8b7"></script>
-                    <div class="gcse-search"></div>
-                  </div>
+                  <div id="pagefind-search" class="input-group" style="width: 100%; padding: 0 5px;"></div>
                 </li>
               </ul>
             </li>
@@ -169,7 +185,7 @@ how PMC members must manage their project's brands in other ways.</p>
 <div class=".pull-right" style="float:right; border-style:dotted; width:200px; padding:5px; margin:5px">
 <p>See also: <a href="//www.apache.org/foundation/marks/resources">Trademark Resources site map</a>.</p>
 </div>
-<div id="toc"><ul><li><a class="toc-href" href="#websites" title="Project Website And URL Policy: Use *.apache.org">Project Website And URL Policy: Use *.apache.org</a></li><li><a class="toc-href" href="#naming" title="Project Naming And Descriptions Policy">Project Naming And Descriptions Policy</a></li><li><a class="toc-href" href="#navigation" title="Website Navigation Links Policy">Website Navigation Links Policy</a></li><li><a class="toc-href" href="#httphttps" title="https or http?">https or http?</a></li><li><a class="toc-href" href="#attributions" title="Trademark Attributions Policy">Trademark Attributions Policy</a></li><li><a class="toc-href" href="#graphics" title="Logos and Graphics Policy">Logos and Graphics Policy</a></li><li><a class="toc-href" href="#poweredby" title="Powered By... Logos">Powered By... Logos</a></li><li><a class="toc-href" href="#metadata" title="Project Metadata">Project Metadata</a></li><li><a class="toc-href" href="#other" title="Other Trademark Requirements">Other Trademark Requirements</a><ul><li><a class="toc-href" href="#nonapache" title="Project-Related Non-apache.org Domain Names">Project-Related Non-apache.org Domain Names</a></li></ul></li><li><a class="toc-href" href="#checklist" title="Project Branding Checklist">Project Branding Checklist</a></li><li><a class="toc-href" href="#rationale" title="Rationale">Rationale</a></li><li><a class="toc-href" href="#notes" title="Important Note">Important Note</a></li></ul></div>
+<div id="toc"><ul><li><a class="toc-href" href="#websites" title="Project Website And URL Policy: Use *.apache.org">Project Website And URL Policy: Use *.apache.org</a></li><li><a class="toc-href" href="#naming" title="Project Naming Policy">Project Naming Policy</a></li><li><a class="toc-href" href="#branding" title="Project Branding And Descriptions Policy">Project Branding And Descriptions Policy</a></li><li><a class="toc-href" href="#navigation" title="Website Navigation Links Policy">Website Navigation Links Policy</a></li><li><a class="toc-href" href="#httphttps" title="https or http?">https or http?</a></li><li><a class="toc-href" href="#attributions" title="Trademark Attributions Policy">Trademark Attributions Policy</a></li><li><a class="toc-href" href="#graphics" title="Logos and Graphics Policy">Logos and Graphics Policy</a></li><li><a class="toc-href" href="#poweredby" title="Powered By... Logos">Powered By... Logos</a></li><li><a class="toc-href" href="#metadata" title="Project Metadata">Project Metadata</a></li><li><a class="toc-href" href="#other" title="Other Trademark Requirements">Other Trademark Requirements</a><ul><li><a class="toc-href" href="#nonapache" title="Project-Related Non-apache.org Domain Names">Project-Related Non-apache.org Domain Names</a></li></ul></li><li><a class="toc-href" href="#checklist" title="Project Branding Checklist">Project Branding Checklist</a></li><li><a class="toc-href" href="#rationale" title="Rationale">Rationale</a></li><li><a class="toc-href" href="#notes" title="Important Note">Important Note</a></li></ul></div>
 <h1 id="websites">Project Website And URL Policy: Use *.apache.org<a class="headerlink" href="#websites" title="Permalink">&para;</a></h1>
 <ul>
 <li>
@@ -203,9 +219,51 @@ open-source development history with a large userbase should
 read about <a href="#nonapache">limitations on using non-apache.org domains</a>.</p>
 </li>
 </ul>
-<h1 id="naming">Project Naming And Descriptions Policy<a class="headerlink" href="#naming" title="Permalink">&para;</a></h1>
-<p><em>Guidelines for <a href="/dev/project-names">choosing names of new projects</a> exist, but haven't
-yet been reviewed and merged into this policy document.</em></p>
+<h1 id="naming">Project Naming Policy<a class="headerlink" href="#naming" title="Permalink">&para;</a></h1>
+<p>The following guidelines are providing to help podlings and projects choose an
+appropriate name:</p>
+<ul>
+<li>"Apache" is our main trademark, or "house mark", for our overall software
+development process. All Apache projects and podlings share it.</li>
+<li>All top level projects (TLPs) must use the format Apache Foo for their
+branding. However, people in informal conversation will refer to your
+project as just "Foo", so choose the name carefully.</li>
+<li>Use internet search tools to be sure that there is no "similar" product,
+i.e. software for a specific purpose.</li>
+<li>When people conduct an internet search after hearing about an ASF project,
+they will use some technical terms and a name. We want to appear near the
+top of the search results and not get confused with some other project in
+the same technical space.</li>
+<li>Avoiding search-results confusion is important for another reason. Apache
+projects are often very quickly highly ranked. An Apache project with a
+similar name to another application in the same technical space may quickly
+come to dominate searches in that space. If someone else holds a related
+trademark, this may lead to a legal dispute. As a non-profit organization,
+the ASF and Apache projects have no business conflicting with an existing
+trademark for software products or related services.</li>
+<li>Even if a product name cannot be found via a search, if you are aware that
+it, or one very like it, is in use for a similar product then we cannot use
+it.</li>
+<li>You may want to choose a name that is easy to remember, is not too long, and
+is not difficult to spell.</li>
+<li>Be culturally sensitive and avoid names that might offend. In particular,
+names with Native American connections will not be approved.</li>
+<li>Consider using functional names, especially for products of existing
+projects, e.g. for an "Apache Foo" project, the product name "Apache Foo
+Pipelines".</li>
+<li>Be good citizens. Do unto others as you would expect that they should do
+unto you. For example, treat the product names of others with respect: do
+not try a twist that is close to the name of a similar product.</li>
+<li>Choose a sensible name early in the product's development, before you
+develop mailing lists, package names, logos, and other marketing collateral.
+Better to spend time now - your project will not want to change its
+product's name later.</li>
+<li>See this as an important marketing opportunity, rather than a bother.</li>
+<li>By carefully validating the uniqueness of our product and project names and
+clearly establishing first use in the field, we reduce the chances of future
+confusion.</li>
+</ul>
+<h1 id="branding">Project Branding And Descriptions Policy<a class="headerlink" href="#branding" title="Permalink">&para;</a></h1>
 <ul>
 <li>
 <p><a id="projectname"></a>The primary branding for any project or product
@@ -554,16 +612,13 @@ Further <a href="//www.apache.org/foundation/marks/resources">resources about tr
     <div class="container">
       <div class="row">
         <br />
-        <div class="col-sm-1">
-
-        </div>
         <div class="col-sm-2">
           <h5 class="white">Community</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
             <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
             <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-            <li><a href="/connect/">Connect & Mentor</a></li>
+            <li><a href="/community-resources/">Community Resources</a></li>
             <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
             <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
             <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -576,9 +631,17 @@ Further <a href="//www.apache.org/foundation/marks/resources">resources about tr
               <li><a href="/projects">Projects</a></li>
               <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
               <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-              <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-              <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+              <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
               <li><a href="/security">Report a Vulnerability</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5 class="white">Downloads</h5>
+          <ul class="list-unstyled white" role="menu">
+            <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+            <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+            <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+            <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
           </ul>
         </div>
 
@@ -586,11 +649,12 @@ Further <a href="//www.apache.org/foundation/marks/resources">resources about tr
           <h5 class="white">Learn</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-            <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-            <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+            <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+            <li><a href="/theapacheway/">The Apache Way</a></li>
             <li><a href="/legal/">Legal &amp; Trademark</a></li>
+            <li><a href="/foundation/marks/">Trademark Policy</a></li>
             <li><a href="/licenses">Licenses</a></li>
-            <li><a href="/foundation/glossary.html">Glossary</a></li>
+            <li><a href="/foundation/glossary">Glossary</a></li>
             <li><a href="/foundation/faq">FAQ</a></li>
           </ul>
         </div>
@@ -598,6 +662,7 @@ Further <a href="//www.apache.org/foundation/marks/resources">resources about tr
         <div class="col-sm-2">
           <h5 class="white">Resources &amp; Tools</h5>
           <ul class="list-unstyled white" role="menu">
+              <li><a href="/dev/">Developer Information</a></li>
               <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
               <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
               <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -616,15 +681,14 @@ Further <a href="//www.apache.org/foundation/marks/resources">resources about tr
             <li><a href="/foundation/sponsors">Our Sponsors</a></li>
             <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
             <li><a href="/foundation/leadership">Leadership</a></li>
-            <li><a href="/foundation/members.html">Members</a></li>
+            <li><a href="/foundation/members">Members</a></li>
             <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
             <li><a href="/press/">Newsroom</a></li>
-            <li><a href="/foundation/contact.html">Contact</a></li>
+            <li><a href="/foundation/contact">Contact</a></li>
+            <li><a href="https://privacy.apache.org/policies/privacy-policy-public.html" target="_blank">Privacy Policy</a></li>
           </ul>
         </div>
 
-        <div class="col-sm-1">
-        </div>
 
       </div>
       <hr class="col-lg-12 hr-white" />

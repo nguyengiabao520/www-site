@@ -38,6 +38,15 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
   visibility: visible
 }  </style>
 
+  <!-- pagefind search -->
+  <link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#pagefind-search" });
+    });
+  </script>
+
 <!-- https://www.apache.org/licenses/LICENSE-2.0 -->
 </head>
 
@@ -65,7 +74,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
                 <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
                 <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-                <li><a href="/connect/">Connect & Mentor</a></li>
+                <li><a href="/community-resources/">Community Resources</a></li>
                 <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
                 <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
                 <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -75,28 +84,38 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Projects&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
+                <li><a href="https://incubator.apache.org/" target="_blank">Incubator Projects</a></li>
                 <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-                <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-                <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+                <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
                 <li><a href="/security">Report a Vulnerability</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Downloads&nbsp;<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+                <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+                <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+                <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Learn&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-                <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-                <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+                <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+                <li><a href="/theapacheway/">The Apache Way</a></li>
                 <li><a href="/legal/">Legal &amp; Trademark</a></li>
+                <li><a href="/foundation/marks/">Trademark Policy</a></li>
                 <li><a href="/licenses">Licenses</a></li>
-                <li><a href="/foundation/glossary.html">Glossary</a></li>
+                <li><a href="/foundation/glossary">Glossary</a></li>
                 <li><a href="/foundation/faq">FAQ</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Resources &amp; Tools&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
+                <li><a href="/dev/">Developer Information</a></li>
                 <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
                 <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
                 <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -114,10 +133,10 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="/foundation/sponsors">Our Sponsors</a></li>
                 <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
                 <li><a href="/foundation/leadership">Leadership</a></li>
-                <li><a href="/foundation/members.html">Members</a></li>
+                <li><a href="/foundation/members">Members</a></li>
                 <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
                 <li><a href="/press/">Newsroom</a></li>
-                <li><a href="/foundation/contact.html">Contact</a></li>
+                <li><a href="/foundation/contact">Contact</a></li>
               </ul>
             </li>
             
@@ -128,10 +147,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                   aria-hidden="true"></span><span class="sr-only">Search</span></a>
               <ul class="dropdown-menu search-form" role="search">
                 <li>
-                  <div class="input-group" style="width: 100%; padding: 0 5px;">
-                    <script async src="https://cse.google.com/cse.js?cx=cb41d2753d228d8b7"></script>
-                    <div class="gcse-search"></div>
-                  </div>
+                  <div id="pagefind-search" class="input-group" style="width: 100%; padding: 0 5px;"></div>
                 </li>
               </ul>
             </li>
@@ -160,7 +176,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
 <p>ASF&rsquo;s open source software is used ubiquitously around the world. Individual Supporters enable the Apache Software Foundation to serve as the global home for hundreds of software projects, and to incubate the next-generation of open source innovations. We thank all current ASF Individual Supporters for their loyalty and contributions, and look forward to welcoming new donors as we continue to expand our community.</p>
 <h2 id="one-time-or-recurring-donations">One-Time or Recurring Donations<a class="headerlink" href="#one-time-or-recurring-donations" title="Permalink">&para;</a></h2>
 <p>Giving to Apache is easy! You can donate with a debit or credit card, bank transfer, PayPal, or Google Pay. If you'd like to mail a check, see instructions below.  Donations are tax-deductible in the U.S. The ASF is recognized by <a href="https://www.charitynavigator.org/index.cfm?bay=search.profile&amp;ein=470825376" target="_blank">Charity Navigator</a> and cited with the Gold Seal of Transparency by <a href="https://www.guidestar.org/profile/47-0825376" target="_blank">GuideStar</a>. Thank you in advance for your generosity!</p>
-<p><a class="btn btn-default mx-10" href="https://donate.apache.org/48ff" role="button">Donate Now</a>
+<p><a class="btn btn-default mx-10" href="https://donate.apache.org/48ff" role="button">Donate Now</a></p>
 <h2 id="corporate-matching-gifts">Corporate Matching Gifts<a class="headerlink" href="#corporate-matching-gifts" title="Permalink">&para;</a></h2>
 <p>Matching gift programs amplify corporate contributions and help further support the ASF. Employers such as American Express, AOL, Bloomberg, IBM, and Microsoft match contributions and volunteer hours made by their employees. Check with your employer&rsquo;s Human Resources department to learn how you can double or triple your support of the ASF through a corporate matching gift program.
 Contact us at <a href="mailto:fundraising@apache.org">fundraising@apache.org</a> to see how your contribution to the ASF can be generously increased.</p>
@@ -168,7 +184,7 @@ Contact us at <a href="mailto:fundraising@apache.org">fundraising@apache.org</a>
 <h3 id="how-will-my-donation-be-used">How will my donation be used?<a class="headerlink" href="#how-will-my-donation-be-used" title="Permalink">&para;</a></h3>
 <p>As a US 501(c)(3) not-for-profit charitable organization, the ASF depends on a variety of funding sources to sustain its day-to-day activities. Tax-deductible contributions from corporations, foundations, and private individuals help offset day-to-day operating expenses that include Infrastructure services; Marketing and PR/AR; and Legal, Accounting, and Operational support.</p>
 <p>We spend less than 10% of our annual budget on overhead. 75% of the ASF's US $1.5M annual budget supports running our critical infrastructure (mailing lists, code repositories, bug tracking systems, Web servers, continuous integration servers, bandwidth, electricity, cooling, administrative staff, and more) that keeps the Foundation and its projects functioning 24x7x365. The annual cost is less than US $5K per project.</p>
-<p>We are proud to highlight the ASF's diverse accomplishments in our <a href="[https://www.guidestar.org/profile/47-0825376](https://apache.org/foundation/reports.html)">Annual Reports</a>. Many of these successes were made possible by your support.</p>
+<p>We are proud to highlight the ASF's diverse accomplishments in our <a href="/foundation/reports.html">Annual Reports</a>. Many of these successes were made possible by your support.</p>
 <h3 id="are-individual-supporter-donations-tax-deductible">Are Individual Supporter donations tax-deductible?<a class="headerlink" href="#are-individual-supporter-donations-tax-deductible" title="Permalink">&para;</a></h3>
 <p>Yes, the Apache Software Foundation is a 501(c)(3) not-for-profit entity so contributions are tax-deductible in the U.S. As regulations vary, we encourage you to consult a qualified advisor experienced with your local tax law pertaining to donations.</p>
 <h3 id="what-is-the-asfs-tax-identification-number">What is the ASF&rsquo;s tax identification number?<a class="headerlink" href="#what-is-the-asfs-tax-identification-number" title="Permalink">&para;</a></h3>
@@ -181,7 +197,7 @@ Wilmington, DE 19801<br/></p>
 <p>To receive a tax receipt, include your email address and the name for whom the donation should be credited (your own or the third party if it is a on behalf of someone else).</p>
 <h3 id="i-have-a-question-who-do-i-contact">I have a question. Who do I contact?<a class="headerlink" href="#i-have-a-question-who-do-i-contact" title="Permalink">&para;</a></h3>
 <p>For more information, please contact us at <a href="mailto:fundraising@apache.org">fundraising@apache.org</a>.</p>
-</p>
+
 </div>  </main>
 
   <!-- Footer -->
@@ -189,16 +205,13 @@ Wilmington, DE 19801<br/></p>
     <div class="container">
       <div class="row">
         <br />
-        <div class="col-sm-1">
-
-        </div>
         <div class="col-sm-2">
           <h5 class="white">Community</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
             <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
             <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-            <li><a href="/connect/">Connect & Mentor</a></li>
+            <li><a href="/community-resources/">Community Resources</a></li>
             <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
             <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
             <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -211,9 +224,17 @@ Wilmington, DE 19801<br/></p>
               <li><a href="/projects">Projects</a></li>
               <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
               <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-              <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-              <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+              <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
               <li><a href="/security">Report a Vulnerability</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5 class="white">Downloads</h5>
+          <ul class="list-unstyled white" role="menu">
+            <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+            <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+            <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+            <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
           </ul>
         </div>
 
@@ -221,11 +242,12 @@ Wilmington, DE 19801<br/></p>
           <h5 class="white">Learn</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-            <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-            <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+            <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+            <li><a href="/theapacheway/">The Apache Way</a></li>
             <li><a href="/legal/">Legal &amp; Trademark</a></li>
+            <li><a href="/foundation/marks/">Trademark Policy</a></li>
             <li><a href="/licenses">Licenses</a></li>
-            <li><a href="/foundation/glossary.html">Glossary</a></li>
+            <li><a href="/foundation/glossary">Glossary</a></li>
             <li><a href="/foundation/faq">FAQ</a></li>
           </ul>
         </div>
@@ -233,6 +255,7 @@ Wilmington, DE 19801<br/></p>
         <div class="col-sm-2">
           <h5 class="white">Resources &amp; Tools</h5>
           <ul class="list-unstyled white" role="menu">
+              <li><a href="/dev/">Developer Information</a></li>
               <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
               <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
               <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -251,15 +274,14 @@ Wilmington, DE 19801<br/></p>
             <li><a href="/foundation/sponsors">Our Sponsors</a></li>
             <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
             <li><a href="/foundation/leadership">Leadership</a></li>
-            <li><a href="/foundation/members.html">Members</a></li>
+            <li><a href="/foundation/members">Members</a></li>
             <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
             <li><a href="/press/">Newsroom</a></li>
-            <li><a href="/foundation/contact.html">Contact</a></li>
+            <li><a href="/foundation/contact">Contact</a></li>
+            <li><a href="https://privacy.apache.org/policies/privacy-policy-public.html" target="_blank">Privacy Policy</a></li>
           </ul>
         </div>
 
-        <div class="col-sm-1">
-        </div>
 
       </div>
       <hr class="col-lg-12 hr-white" />

@@ -38,6 +38,15 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
   visibility: visible
 }  </style>
 
+  <!-- pagefind search -->
+  <link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#pagefind-search" });
+    });
+  </script>
+
 <!-- https://www.apache.org/licenses/LICENSE-2.0 -->
 </head>
 
@@ -65,7 +74,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
                 <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
                 <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-                <li><a href="/connect/">Connect & Mentor</a></li>
+                <li><a href="/community-resources/">Community Resources</a></li>
                 <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
                 <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
                 <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -75,28 +84,38 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Projects&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
+                <li><a href="https://incubator.apache.org/" target="_blank">Incubator Projects</a></li>
                 <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-                <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-                <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+                <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
                 <li><a href="/security">Report a Vulnerability</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Downloads&nbsp;<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+                <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+                <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+                <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Learn&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-                <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-                <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+                <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+                <li><a href="/theapacheway/">The Apache Way</a></li>
                 <li><a href="/legal/">Legal &amp; Trademark</a></li>
+                <li><a href="/foundation/marks/">Trademark Policy</a></li>
                 <li><a href="/licenses">Licenses</a></li>
-                <li><a href="/foundation/glossary.html">Glossary</a></li>
+                <li><a href="/foundation/glossary">Glossary</a></li>
                 <li><a href="/foundation/faq">FAQ</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Resources &amp; Tools&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
+                <li><a href="/dev/">Developer Information</a></li>
                 <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
                 <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
                 <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -114,10 +133,10 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="/foundation/sponsors">Our Sponsors</a></li>
                 <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
                 <li><a href="/foundation/leadership">Leadership</a></li>
-                <li><a href="/foundation/members.html">Members</a></li>
+                <li><a href="/foundation/members">Members</a></li>
                 <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
                 <li><a href="/press/">Newsroom</a></li>
-                <li><a href="/foundation/contact.html">Contact</a></li>
+                <li><a href="/foundation/contact">Contact</a></li>
               </ul>
             </li>
             
@@ -128,10 +147,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                   aria-hidden="true"></span><span class="sr-only">Search</span></a>
               <ul class="dropdown-menu search-form" role="search">
                 <li>
-                  <div class="input-group" style="width: 100%; padding: 0 5px;">
-                    <script async src="https://cse.google.com/cse.js?cx=cb41d2753d228d8b7"></script>
-                    <div class="gcse-search"></div>
-                  </div>
+                  <div id="pagefind-search" class="input-group" style="width: 100%; padding: 0 5px;"></div>
                 </li>
               </ul>
             </li>
@@ -336,7 +352,7 @@ Southern Hemisphere.</p>
 <h3 id="2011">Highlights: 2011<a class="headerlink" href="#2011" title="Permalink">&para;</a></h3>
 <p>Apache ACE, Chemistry, Deltacloud, JMeter, Libcloud, River, Whirr became Top-level Projects. More projects than ever submitted to become part of the Apache community: Accumulo, Airavata, Ambari, Any23, AWF, Bigtop, Bloodhound, Cordova, DeltaSpike, DirectMemory, EasyAnt, Flex, Flume, Giraph, HCatalog, Kafka, Kalumet, Lucene.Net, MRUnit, ODF Toolkit, OGNL, Oozie,   OpenMeetings, OpenOffice, Rave, S4, and Sqoop entered the Incubator. Apache Alois retired from the Incubator. Apache Harmony, Jakarta, and Xindice moved to the Attic. Milestone project releases include Cassandra 0.7 and 1.0, Geronimo v3.0-beta-1, Pivot 2.0, Subversion 1.7.0, Tika 1.0, and Turbine 4.0-M1. Apache TomEE is certified as Java EE 6 Web Profile Compatible. Apache UIMA and Hadoop advance data intelligence and semantic capabilities of Watson, IBM's "Smartest Machine on Earth" demonstrated in first-ever man vs. machine competition on Jeopardy! quiz show. Apache Hadoop wins
 MediaGuardian&rsquo;s "Innovator of the Year" award. The ASF accepted to become an Affiliate at the Open Source Initiative. New Executive Committee is appointed: Doug Cutting as Chair, Greg Stein as Vice Chair, Jim Jagielski as President, Noirin Plunkett as Executive Vice President, Sam Ruby as Vice President - Infrastructure, Craig L Russell as Secretary, Sam Ruby as Assistant Secretary, and Geir Magnusson, Jr., as Treasurer. The ASF is subpoenaed by the United Stated District Court to produce documents in Oracle America vs. Google related to the use of Apache Harmony code in the Android software platform, and the unsuccessful attempt by Apache to secure an acceptable license to the Java SE Technology Compatibility Kit. The ASF issues statement on Apache OpenOffice.org (the first mature, end-user-facing Apache project) and Open Letter to the Open Document Format Ecosystem clarifying that its code base was not pursued by the ASF prior to its acceptance into
-the Apache Incubator, and articulating the project&rsquo;s vision within the wider Open Document Format ecosystem. 42 new ASF Members were elected, bringing the active membership to 370 individuals and 2,663 Apache Commiters world-wide. ASF Platinum Sponsors are Google, Microsoft, and Yahoo!; AMD, Facebook, and Hortonworks join Gold Sponsors Hewlett-Packard and IBM; PSW Group joins Silver Sponsors Cloudera, Progress Software and Springsource/VMWare; and Liip AG, Lucid Imagination, Talend, and WANdisco join Bronze Sponsors BlueNog, Intuit, Joost, and Matt Mullenweg. ApacheCon North America took place in Vancouver, Canada.</p>
+the Apache Incubator, and articulating the project&rsquo;s vision within the wider Open Document Format ecosystem. 42 new ASF Members were elected, bringing the active membership to 370 individuals and 2,663 Apache Committers world-wide. ASF Platinum Sponsors are Google, Microsoft, and Yahoo!; AMD, Facebook, and Hortonworks join Gold Sponsors Hewlett-Packard and IBM; PSW Group joins Silver Sponsors Cloudera, Progress Software and Springsource/VMWare; and Liip AG, Lucid Imagination, Talend, and WANdisco join Bronze Sponsors BlueNog, Intuit, Joost, and Matt Mullenweg. ApacheCon North America took place in Vancouver, Canada.</p>
 <h3 id="2012">Highlights: 2012<a class="headerlink" href="#2012" title="Permalink">&para;</a></h3>
 <p>The ASF celebrated the 17th Anniversary of the Apache HTTP Server with the release of v2.4; the project maintains its standing as the world's most popular Web server, powering nearly 400 million sites. The Apache Incubator continues to gain momentum, with 85 podlings graduating over the past decade. Apache Accumulo, Airavata, Any23, Bigtop, BVal, Cordova, Creadur, DirectMemory, Empire-db, Flex, Flume, Giraph, Gora, Hama, ISIS, Jena, Kafka, Lucene.Net, Lucy, ManifoldCF, MRUnit, Oozie, OpenNLP, OpenOffice, Rave, SIS, Sqoop, Stanbol, Steve, Syncope, VCL, Wink, Wookie become Top-level Projects. Allura, Blur, CloudStack, Crunch, cTAKES, DeviceMap, Drill, Hadoop Development Tools, Helix, Marmotta, Ripple, Streams, and Syncope entered the Incbuator. Apache AWF, HISE, Kato, Kitty, and PhotArk retired from the Incubator. Milestone project releases include Deltacloud 1.0, Hadoop 1.0, Nutch 2.0, TomEE 1.0, Traffic Server 3.2, and Wicket 6.0. New Executive Committee
 is appointed: Doug Cutting as Chair, Greg Stein as Vice Chair, Jim Jagielski as President, Ross Gardler as Executive Vice President, Craig L Russell as Secretary, Chris Mattmann as Treasurer, and Sam Ruby as Assistant Secretary. ASF Officers that now serve at the direction of the President are: Vice President, Brand Management; Vice President, Fundraising; Vice President, Marketing and Publicity; and Vice President, Conference Planning. The office of Vice President, Java Community Process is dissolved. 46 new ASF Members were elected this year. Citrix became an ASF Sponsor, joining Facebook, Google, Microsoft, and Yahoo! at the Platinum level; AMD, Hortonworks, HP, IBM, and Matt Mullenweg at the Gold level; GoDaddy, Huawei, and In Motion Hosting joined Basis Technology, Cloudera, PSW GROUP, SpringSource, and WANdisco at the Silver level; and Intuit and Twitter joined BlueNog, Digital Primates, Intuit, Joost, Liip AG SA Ltd, Lucid Imagination, Talend,
@@ -371,16 +387,13 @@ Accor, Basis Technology, Bluehost, Cloudsoft Corporation, Samsung, Talend, and T
     <div class="container">
       <div class="row">
         <br />
-        <div class="col-sm-1">
-
-        </div>
         <div class="col-sm-2">
           <h5 class="white">Community</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
             <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
             <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-            <li><a href="/connect/">Connect & Mentor</a></li>
+            <li><a href="/community-resources/">Community Resources</a></li>
             <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
             <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
             <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -393,9 +406,17 @@ Accor, Basis Technology, Bluehost, Cloudsoft Corporation, Samsung, Talend, and T
               <li><a href="/projects">Projects</a></li>
               <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
               <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-              <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-              <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+              <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
               <li><a href="/security">Report a Vulnerability</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5 class="white">Downloads</h5>
+          <ul class="list-unstyled white" role="menu">
+            <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+            <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+            <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+            <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
           </ul>
         </div>
 
@@ -403,11 +424,12 @@ Accor, Basis Technology, Bluehost, Cloudsoft Corporation, Samsung, Talend, and T
           <h5 class="white">Learn</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-            <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-            <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+            <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+            <li><a href="/theapacheway/">The Apache Way</a></li>
             <li><a href="/legal/">Legal &amp; Trademark</a></li>
+            <li><a href="/foundation/marks/">Trademark Policy</a></li>
             <li><a href="/licenses">Licenses</a></li>
-            <li><a href="/foundation/glossary.html">Glossary</a></li>
+            <li><a href="/foundation/glossary">Glossary</a></li>
             <li><a href="/foundation/faq">FAQ</a></li>
           </ul>
         </div>
@@ -415,6 +437,7 @@ Accor, Basis Technology, Bluehost, Cloudsoft Corporation, Samsung, Talend, and T
         <div class="col-sm-2">
           <h5 class="white">Resources &amp; Tools</h5>
           <ul class="list-unstyled white" role="menu">
+              <li><a href="/dev/">Developer Information</a></li>
               <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
               <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
               <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -433,15 +456,14 @@ Accor, Basis Technology, Bluehost, Cloudsoft Corporation, Samsung, Talend, and T
             <li><a href="/foundation/sponsors">Our Sponsors</a></li>
             <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
             <li><a href="/foundation/leadership">Leadership</a></li>
-            <li><a href="/foundation/members.html">Members</a></li>
+            <li><a href="/foundation/members">Members</a></li>
             <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
             <li><a href="/press/">Newsroom</a></li>
-            <li><a href="/foundation/contact.html">Contact</a></li>
+            <li><a href="/foundation/contact">Contact</a></li>
+            <li><a href="https://privacy.apache.org/policies/privacy-policy-public.html" target="_blank">Privacy Policy</a></li>
           </ul>
         </div>
 
-        <div class="col-sm-1">
-        </div>
 
       </div>
       <hr class="col-lg-12 hr-white" />

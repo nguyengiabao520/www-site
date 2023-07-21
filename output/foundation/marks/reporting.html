@@ -38,6 +38,15 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
   visibility: visible
 }  </style>
 
+  <!-- pagefind search -->
+  <link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#pagefind-search" });
+    });
+  </script>
+
 <!-- https://www.apache.org/licenses/LICENSE-2.0 -->
 </head>
 
@@ -65,7 +74,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
                 <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
                 <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-                <li><a href="/connect/">Connect & Mentor</a></li>
+                <li><a href="/community-resources/">Community Resources</a></li>
                 <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
                 <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
                 <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -75,28 +84,38 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Projects&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
+                <li><a href="https://incubator.apache.org/" target="_blank">Incubator Projects</a></li>
                 <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-                <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-                <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+                <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
                 <li><a href="/security">Report a Vulnerability</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Downloads&nbsp;<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+                <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+                <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+                <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Learn&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-                <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-                <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+                <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+                <li><a href="/theapacheway/">The Apache Way</a></li>
                 <li><a href="/legal/">Legal &amp; Trademark</a></li>
+                <li><a href="/foundation/marks/">Trademark Policy</a></li>
                 <li><a href="/licenses">Licenses</a></li>
-                <li><a href="/foundation/glossary.html">Glossary</a></li>
+                <li><a href="/foundation/glossary">Glossary</a></li>
                 <li><a href="/foundation/faq">FAQ</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Resources &amp; Tools&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
+                <li><a href="/dev/">Developer Information</a></li>
                 <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
                 <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
                 <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -114,10 +133,10 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="/foundation/sponsors">Our Sponsors</a></li>
                 <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
                 <li><a href="/foundation/leadership">Leadership</a></li>
-                <li><a href="/foundation/members.html">Members</a></li>
+                <li><a href="/foundation/members">Members</a></li>
                 <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
                 <li><a href="/press/">Newsroom</a></li>
-                <li><a href="/foundation/contact.html">Contact</a></li>
+                <li><a href="/foundation/contact">Contact</a></li>
               </ul>
             </li>
             
@@ -128,10 +147,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                   aria-hidden="true"></span><span class="sr-only">Search</span></a>
               <ul class="dropdown-menu search-form" role="search">
                 <li>
-                  <div class="input-group" style="width: 100%; padding: 0 5px;">
-                    <script async src="https://cse.google.com/cse.js?cx=cb41d2753d228d8b7"></script>
-                    <div class="gcse-search"></div>
-                  </div>
+                  <div id="pagefind-search" class="input-group" style="width: 100%; padding: 0 5px;"></div>
                 </li>
               </ul>
             </li>
@@ -419,16 +435,13 @@ third party products, services, or events.</strong></p>
     <div class="container">
       <div class="row">
         <br />
-        <div class="col-sm-1">
-
-        </div>
         <div class="col-sm-2">
           <h5 class="white">Community</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
             <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
             <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-            <li><a href="/connect/">Connect & Mentor</a></li>
+            <li><a href="/community-resources/">Community Resources</a></li>
             <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
             <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
             <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -441,9 +454,17 @@ third party products, services, or events.</strong></p>
               <li><a href="/projects">Projects</a></li>
               <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
               <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-              <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-              <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+              <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
               <li><a href="/security">Report a Vulnerability</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5 class="white">Downloads</h5>
+          <ul class="list-unstyled white" role="menu">
+            <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+            <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+            <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+            <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
           </ul>
         </div>
 
@@ -451,11 +472,12 @@ third party products, services, or events.</strong></p>
           <h5 class="white">Learn</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-            <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-            <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+            <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+            <li><a href="/theapacheway/">The Apache Way</a></li>
             <li><a href="/legal/">Legal &amp; Trademark</a></li>
+            <li><a href="/foundation/marks/">Trademark Policy</a></li>
             <li><a href="/licenses">Licenses</a></li>
-            <li><a href="/foundation/glossary.html">Glossary</a></li>
+            <li><a href="/foundation/glossary">Glossary</a></li>
             <li><a href="/foundation/faq">FAQ</a></li>
           </ul>
         </div>
@@ -463,6 +485,7 @@ third party products, services, or events.</strong></p>
         <div class="col-sm-2">
           <h5 class="white">Resources &amp; Tools</h5>
           <ul class="list-unstyled white" role="menu">
+              <li><a href="/dev/">Developer Information</a></li>
               <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
               <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
               <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -481,15 +504,14 @@ third party products, services, or events.</strong></p>
             <li><a href="/foundation/sponsors">Our Sponsors</a></li>
             <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
             <li><a href="/foundation/leadership">Leadership</a></li>
-            <li><a href="/foundation/members.html">Members</a></li>
+            <li><a href="/foundation/members">Members</a></li>
             <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
             <li><a href="/press/">Newsroom</a></li>
-            <li><a href="/foundation/contact.html">Contact</a></li>
+            <li><a href="/foundation/contact">Contact</a></li>
+            <li><a href="https://privacy.apache.org/policies/privacy-policy-public.html" target="_blank">Privacy Policy</a></li>
           </ul>
         </div>
 
-        <div class="col-sm-1">
-        </div>
 
       </div>
       <hr class="col-lg-12 hr-white" />

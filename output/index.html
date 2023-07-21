@@ -38,6 +38,15 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
   visibility: visible
 }  </style>
 
+  <!-- pagefind search -->
+  <link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#pagefind-search" });
+    });
+  </script>
+
 
 </head>
 
@@ -65,7 +74,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
                 <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
                 <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-                <li><a href="/connect/">Connect & Mentor</a></li>
+                <li><a href="/community-resources/">Community Resources</a></li>
                 <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
                 <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
                 <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -75,28 +84,38 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Projects&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
+                <li><a href="https://incubator.apache.org/" target="_blank">Incubator Projects</a></li>
                 <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-                <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-                <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+                <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
                 <li><a href="/security">Report a Vulnerability</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Downloads&nbsp;<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+                <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+                <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+                <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Learn&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-                <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-                <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+                <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+                <li><a href="/theapacheway/">The Apache Way</a></li>
                 <li><a href="/legal/">Legal &amp; Trademark</a></li>
+                <li><a href="/foundation/marks/">Trademark Policy</a></li>
                 <li><a href="/licenses">Licenses</a></li>
-                <li><a href="/foundation/glossary.html">Glossary</a></li>
+                <li><a href="/foundation/glossary">Glossary</a></li>
                 <li><a href="/foundation/faq">FAQ</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Resources &amp; Tools&nbsp;<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
+                <li><a href="/dev/">Developer Information</a></li>
                 <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
                 <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
                 <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -114,10 +133,10 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                 <li><a href="/foundation/sponsors">Our Sponsors</a></li>
                 <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
                 <li><a href="/foundation/leadership">Leadership</a></li>
-                <li><a href="/foundation/members.html">Members</a></li>
+                <li><a href="/foundation/members">Members</a></li>
                 <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
                 <li><a href="/press/">Newsroom</a></li>
-                <li><a href="/foundation/contact.html">Contact</a></li>
+                <li><a href="/foundation/contact">Contact</a></li>
               </ul>
             </li>
             
@@ -128,10 +147,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
                   aria-hidden="true"></span><span class="sr-only">Search</span></a>
               <ul class="dropdown-menu search-form" role="search">
                 <li>
-                  <div class="input-group" style="width: 100%; padding: 0 5px;">
-                    <script async src="https://cse.google.com/cse.js?cx=cb41d2753d228d8b7"></script>
-                    <div class="gcse-search"></div>
-                  </div>
+                  <div id="pagefind-search" class="input-group" style="width: 100%; padding: 0 5px;"></div>
                 </li>
               </ul>
             </li>
@@ -221,38 +237,41 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
 	on <a href="https://feathercast.apache.org/">Feathercast</a>, the voice of the ASF.</p>
 <!-- gm -->
 <div class="updates">
-<article class="card">
-<div class="content">
-<span class="label label-danger">Twitter</span>
+<!-- 
+        <article class="card">
+        <div class="content">
+           <span class="label label-danger">Twitter</span>
 <div>
 <p><a href="https://twitter.com/TheASF">@TheASF</a> Cannot connect to Twitter at present</p>
 </div>
-</div>
-<a class="continue" href="https://twitter.com/TheASF">Continue Reading&nbsp;&rarr;</a>
-</article>
+         </div>
+<pre><code>     &lt;a class=&quot;continue&quot; href=&quot;https://twitter.com/TheASF&quot;&gt;Continue Reading&amp;nbsp;&amp;rarr;&lt;/a&gt;
+   &lt;/article&gt;
+</code></pre>
+<p>--&gt;
 <article class="card">
 <div class="content">
 <span class="label label-danger">Foundation Blog</span>
-<h5><a class="entryTitle" href="https://news.apache.org/?p=4974">Apache Airflow Attracts First-Time Contributors</a></h5>
+<h5><a class="entryTitle" href="https://news.apache.org/?p=5067">Save Open Source: The Impending Tragedy of the Cyber Resilience Act</a></h5>
 </div>
-<a class="continue" href="https://news.apache.org/">Continue Reading&nbsp;&rarr;</a>
+<a class="continue" href="https://news.apache.org/">Continue Reading →</a>
 </article>
 <article class="card">
 <div class="content">
 <span class="label label-danger">Project Blogs</span>
 </div>
-<a class="continue" href="https://blogs.apache.org">Continue Reading&nbsp;&rarr;</a>
+<a class="continue" href="https://blogs.apache.org">Continue Reading →</a>
 </article>
 <article class="card">
 <div class="content">
 <span class="label label-danger">Conferences</span>
 </div>
-<a class="continue" href="https://blogs.apache.org/conferences">Continue Reading&nbsp;&rarr;</a>
+<a class="continue" href="https://blogs.apache.org/conferences">Continue Reading →</a>
 </article>
+</div></p>
+ <!-- /gm -->
 </div>
-<!-- /gm -->
-</div>
-</section>
+</div></section>
 <!-- / Updates Section    -->
 <!-- Highlights -->
 <section class="bg-gray">
@@ -356,48 +375,48 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
 <div class="tabbable tabs-left visible-md-inline visible-lg-inline">
 <ul class="nav nav-tabs">
 <li class="active">
-<a data-toggle="tab" href="#gora">Gora</a>
+<a data-toggle="tab" href="#hop">Hop</a>
 </li><li>
-<a data-toggle="tab" href="#httpcomponents">HttpComponents</a>
+<a data-toggle="tab" href="#ws">Web Services</a>
 </li><li>
-<a data-toggle="tab" href="#apr">Portable Runtime (APR)</a>
+<a data-toggle="tab" href="#flagon">Flagon</a>
 </li>
 </ul>
 </div>
 </div>
 <div class="col-md-9 col-sm-12">
 <div class="tab-content">
-<div class="tab-pane fade in active" id="gora">
+<div class="tab-pane fade in active" id="hop">
 <div class="row">
 <div class="col-sm-2">
-<img alt="Logo" class="img-responsive center-block" src="/logos/res/gora/default.png"/>
+<img alt="Logo" class="img-responsive center-block" src="/logos/res/hop/default.png"/>
 </div>
 <div class="col-sm-10">
-<h4 class="no-btm-margin" id="featured-project-gora"><a href="http://gora.apache.org/">Gora</a></h4>
-<p>ORM framework for column stores such as Apache HBase and Apache Cassandra with a specific focus on Hadoop</p>
-<a class="btn btn-default btn-sm" href="http://gora.apache.org/" role="button">Learn More...</a>
+<h4 class="no-btm-margin" id="featured-project-hop"><a href="http://hop.apache.org">Hop</a></h4>
+<p>a platform for data orchestration</p>
+<a class="btn btn-default btn-sm" href="http://hop.apache.org" role="button">Learn More...</a>
 </div>
 </div>
-</div><div class="tab-pane fade in" id="httpcomponents">
+</div><div class="tab-pane fade in" id="ws">
 <div class="row">
 <div class="col-sm-2">
-<img alt="Logo" class="img-responsive center-block" src="/foundation/press/kit/poweredBy/Apache_PoweredBy.svg"/>
+<img alt="Logo" class="img-responsive center-block" src="/logos/res/ws/default.png"/>
 </div>
 <div class="col-sm-10">
-<h4 class="no-btm-margin" id="featured-project-httpcomponents"><a href="http://hc.apache.org/">HttpComponents</a></h4>
-<p>Java toolset of low level HTTP components</p>
-<a class="btn btn-default btn-sm" href="http://hc.apache.org/" role="button">Learn More...</a>
+<h4 class="no-btm-margin" id="featured-project-ws"><a href="http://ws.apache.org/">Web Services</a></h4>
+<p>Projects related to Web Services</p>
+<a class="btn btn-default btn-sm" href="http://ws.apache.org/" role="button">Learn More...</a>
 </div>
 </div>
-</div><div class="tab-pane fade in" id="apr">
+</div><div class="tab-pane fade in" id="flagon">
 <div class="row">
 <div class="col-sm-2">
-<img alt="Logo" class="img-responsive center-block" src="/logos/res/apr/default.png"/>
+<img alt="Logo" class="img-responsive center-block" src="/logos/res/flagon/default.png"/>
 </div>
 <div class="col-sm-10">
-<h4 class="no-btm-margin" id="featured-project-apr"><a href="http://apr.apache.org/">Portable Runtime (APR)</a></h4>
-<p>Apache Portable Runtime libraries</p>
-<a class="btn btn-default btn-sm" href="http://apr.apache.org/" role="button">Learn More...</a>
+<h4 class="no-btm-margin" id="featured-project-flagon"><a href="http://flagon.apache.org">Flagon</a></h4>
+<p>thin-client behavioral logging capability useful for business analytics, usage analytics, usability and user testing</p>
+<a class="btn btn-default btn-sm" href="http://flagon.apache.org" role="button">Learn More...</a>
 </div>
 </div>
 </div>
@@ -416,48 +435,48 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
 <div class="tabbable tabs-left visible-md-inline visible-lg-inline">
 <ul class="nav nav-tabs">
 <li class="active">
-<a data-toggle="tab" href="#paimon">Paimon</a>
+<a data-toggle="tab" href="#hugegraph">HugeGraph</a>
 </li><li>
-<a data-toggle="tab" href="#tuweni">Tuweni</a>
+<a data-toggle="tab" href="#pekko">Pekko</a>
 </li><li>
-<a data-toggle="tab" href="#nlpcraft">NLPCraft</a>
+<a data-toggle="tab" href="#teaclave">Teaclave</a>
 </li>
 </ul>
 </div>
 </div>
 <div class="col-md-9 col-sm-12">
 <div class="tab-content">
-<div class="tab-pane fade in active" id="paimon">
+<div class="tab-pane fade in active" id="hugegraph">
 <div class="row">
 <div class="col-sm-2">
-<img alt="Logo" class="img-responsive center-block" src="/logos/res/paimon/default.png"/>
+<img alt="Logo" class="img-responsive center-block" src="/logos/res/hugegraph/default.png"/>
 </div>
 <div class="col-sm-10">
-<h4 class="no-btm-margin" id="incubating-project-paimon"><a href="http://paimon.incubator.apache.org/">Paimon</a></h4>
-<p>Paimon is a unified lake storage to build dynamic tables for both stream and batch processing with big data compute engines, supporting high-speed data ingestion and real-time data query.</p>
-<a class="btn btn-default btn-sm" href="http://paimon.incubator.apache.org/" role="button">Learn More...</a>
+<h4 class="no-btm-margin" id="incubating-project-hugegraph"><a href="http://hugegraph.incubator.apache.org/">HugeGraph</a></h4>
+<p>A large-scale and easy-to-use graph database</p>
+<a class="btn btn-default btn-sm" href="http://hugegraph.incubator.apache.org/" role="button">Learn More...</a>
 </div>
 </div>
-</div><div class="tab-pane fade in" id="tuweni">
+</div><div class="tab-pane fade in" id="pekko">
 <div class="row">
 <div class="col-sm-2">
-<img alt="Logo" class="img-responsive center-block" src="/logos/res/tuweni/default.png"/>
+<img alt="Logo" class="img-responsive center-block" src="/logos/res/pekko/default.png"/>
 </div>
 <div class="col-sm-10">
-<h4 class="no-btm-margin" id="incubating-project-tuweni"><a href="http://tuweni.incubator.apache.org/">Tuweni</a></h4>
-<p>Tuweni is a set of libraries and other tools to aid development of blockchain and other decentralized software in Java and other JVM languages.</p>
-<a class="btn btn-default btn-sm" href="http://tuweni.incubator.apache.org/" role="button">Learn More...</a>
+<h4 class="no-btm-margin" id="incubating-project-pekko"><a href="http://pekko.incubator.apache.org/">Pekko</a></h4>
+<p>Pekko is a toolkit and an ecosystem for building highly concurrent, distributed, reactive and resilient applications for Java and Scala.</p>
+<a class="btn btn-default btn-sm" href="http://pekko.incubator.apache.org/" role="button">Learn More...</a>
 </div>
 </div>
-</div><div class="tab-pane fade in" id="nlpcraft">
+</div><div class="tab-pane fade in" id="teaclave">
 <div class="row">
 <div class="col-sm-2">
-<img alt="Logo" class="img-responsive center-block" src="/logos/res/nlpcraft/default.png"/>
+<img alt="Logo" class="img-responsive center-block" src="/logos/res/teaclave/default.png"/>
 </div>
 <div class="col-sm-10">
-<h4 class="no-btm-margin" id="incubating-project-nlpcraft"><a href="http://nlpcraft.incubator.apache.org/">NLPCraft</a></h4>
-<p>A Java API for NLU applications</p>
-<a class="btn btn-default btn-sm" href="http://nlpcraft.incubator.apache.org/" role="button">Learn More...</a>
+<h4 class="no-btm-margin" id="incubating-project-teaclave"><a href="http://teaclave.incubator.apache.org/">Teaclave</a></h4>
+<p>Teaclave is a universal secure computing platform.</p>
+<a class="btn btn-default btn-sm" href="http://teaclave.incubator.apache.org/" role="button">Learn More...</a>
 </div>
 </div>
 </div>
@@ -538,7 +557,6 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
 <li><a href="http://allura.apache.org/" title="Forge software for hosting software projects">Allura</a></li>
 <li><a href="http://ambari.apache.org/" title="Hadoop cluster management">Ambari</a></li>
 <li><a href="http://ant.apache.org/" title="Java-based build tool">Ant</a></li>
-<li><a href="http://any23.apache.org/" title="Anything to Triples">Any23</a></li>
 <li><a href="http://archiva.apache.org/" title="Build Artifact Repository Manager">Archiva</a></li>
 <li><a href="http://aries.apache.org/" title="Enterprise OSGi application programming model">Aries</a></li>
 <li><a href="http://arrow.apache.org/" title="Powering Columnar In-Memory Analytics">Arrow</a></li>
@@ -567,11 +585,11 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
 <li><a href="http://cayenne.apache.org/" title="User-friendly Java ORM with Tools">Cayenne</a></li>
 <li><a href="http://celix.apache.org/" title="Implementation of the OSGi specification adapted to C">Celix</a></li>
 <li><a href="http://cloudstack.apache.org/" title="Infrastructure as a Service solution">CloudStack</a></li>
+<li><a href="http://cocoon.apache.org/" title="Web development framework: separation of concerns, component-based">Cocoon</a></li>
 </ul>
 </div>
 <div class="col-lg-6 col-md-12 border-right">
 <ul class="list-unstyled" style="margin-bottom: 0px;">
-<li><a href="http://cocoon.apache.org/" title="Web development framework: separation of concerns, component-based">Cocoon</a></li>
 <li><a href="http://commons.apache.org/" title="Reusable Java components">Commons</a></li>
 <li><a href="http://community.apache.org/" title="Resources to help people become involved with Apache projects">Community Development</a></li>
 <li><a href="http://cordova.apache.org/" title="Platform for building native mobile applications using HTML, CSS and JavaScript">Cordova</a></li>
@@ -611,6 +629,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
 <li><a href="http://gobblin.apache.org" title="a distributed data integration framework that simplifies common aspects of big data integration such as data ingestion, replication, organization and lifecycle management for both streaming and batch data ecosystems">Gobblin</a></li>
 <li><a href="http://gora.apache.org/" title="ORM framework for column stores such as Apache HBase and Apache Cassandra with a specific focus on Hadoop">Gora</a></li>
 <li><a href="http://griffin.apache.org/" title="a data quality solution for big data, including both streaming and batch mode. It offers an unified process to measure data quality from different perspectives.">Griffin</a></li>
+<li><a href="http://groovy.apache.org/" title="A multi-faceted language for the Java platform">Groovy</a></li>
 </ul>
 </div>
 </div>
@@ -619,7 +638,6 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
 <div class="row">
 <div class="col-lg-6 col-md-12 border-right">
 <ul class="list-unstyled" style="margin-bottom: 0px;">
-<li><a href="http://groovy.apache.org/" title="A multi-faceted language for the Java platform">Groovy</a></li>
 <li><a href="http://guacamole.apache.org/" title="providing performant, browser-based remote access">Guacamole</a></li>
 <li><a href="http://gump.apache.org/" title="Continuous integration of open source projects">Gump</a></li>
 <li class="letter-header">H</li>
@@ -653,6 +671,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
 <li><a href="http://kibble.apache.org/" title="an interactive project activity analyzer and aggregator">Kibble</a></li>
 <li><a href="http://knox.apache.org/" title="Simplify and normalize the deployment and implementation of secure Hadoop clusters">Knox</a></li>
 <li><a href="http://kudu.apache.org/" title="A distributed columnar storage engine built for the Apache Hadoop ecosystem">Kudu</a></li>
+<li><a href="http://kvrocks.apache.org" title="a distributed key-value NoSQL database, supporting the rich data structure">Kvrocks</a></li>
 <li><a href="http://kylin.apache.org/" title="Extreme OLAP Engine for Big Data">Kylin</a></li>
 <li><a href="http://kyuubi.apache.org" title="a distributed and multi-tenant gateway to provide serverless SQL on data warehouses and lakehouses">Kyuubi</a></li>
 <li class="letter-header">L</li>
@@ -809,16 +828,13 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
     <div class="container">
       <div class="row">
         <br />
-        <div class="col-sm-1">
-
-        </div>
         <div class="col-sm-2">
           <h5 class="white">Community</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://community.apache.org/" target="_blank">Contributor Getting Started</a></li>
             <li><a href="https://community.apache.org/contributors/" target="_blank">Becoming a Committer</a></li>
             <li><a href="/foundation/policies/conduct">Code of Conduct</a></li>
-            <li><a href="/connect/">Connect & Mentor</a></li>
+            <li><a href="/community-resources/">Community Resources</a></li>
             <li><a href="https://communityovercode.org/" target="_blank">Community Over Code</a></li>
             <li><a href="https://events.apache.org/" target="_blank">Events</a></li>
             <li><a href="https://www.redbubble.com/people/comdev/shop" target="_blank">Store</a></li>
@@ -831,9 +847,17 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
               <li><a href="/projects">Projects</a></li>
               <li><a href="https://incubator.apache.org/" target="_blank">Host Your Project</a></li>
               <li><a href="https://projects.apache.org/" target="_blank">Projects Directory </a></li>
-              <li><a href="https://projects.apache.org/releases.html" target="_blank">Download</a></li>
-              <li><a href="https://lists.apache.org/" target="_blank">Mailing Lists </a></li>
+              <li><a href="/foundation/mailinglists">Mailing Lists </a></li>
               <li><a href="/security">Report a Vulnerability</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-2">
+          <h5 class="white">Downloads</h5>
+          <ul class="list-unstyled white" role="menu">
+            <li><a href="https://downloads.apache.org/" target="_blank">Distributions</a></li>
+            <li><a href="https://projects.apache.org/releases.html" target="_blank">Releases</a></li>
+            <li><a href="https://status.apache.org/" target="_blank">Infrastructure Status</a></li>
+            <li><a href="https://infra-reports.apache.org/#uptime" target="_blank">Infrastructure Statistics</a></li>
           </ul>
         </div>
 
@@ -841,11 +865,12 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
           <h5 class="white">Learn</h5>
           <ul class="list-unstyled white" role="menu">
             <li><a href="https://news.apache.org/" target="_blank">Blog</a></li>
-            <li><a href="/foundation/how-it-works.html">How the ASF Works</a></li>
-            <li><a href="/theapacheway/index.html">The Apache Way</a></li>
+            <li><a href="/foundation/how-it-works">How the ASF Works</a></li>
+            <li><a href="/theapacheway/">The Apache Way</a></li>
             <li><a href="/legal/">Legal &amp; Trademark</a></li>
+            <li><a href="/foundation/marks/">Trademark Policy</a></li>
             <li><a href="/licenses">Licenses</a></li>
-            <li><a href="/foundation/glossary.html">Glossary</a></li>
+            <li><a href="/foundation/glossary">Glossary</a></li>
             <li><a href="/foundation/faq">FAQ</a></li>
           </ul>
         </div>
@@ -853,6 +878,7 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
         <div class="col-sm-2">
           <h5 class="white">Resources &amp; Tools</h5>
           <ul class="list-unstyled white" role="menu">
+              <li><a href="/dev/">Developer Information</a></li>
               <li><a href="https://cwiki.apache.org/" target="_blank" >Wiki</a></li>
               <li><a href="https://issues.apache.org/" target="_blank" >Issues</a></li>
               <li><a href="https://infra.apache.org/slack.html" target="_blank" >Slack</a></li>
@@ -871,15 +897,14 @@ dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover 
             <li><a href="/foundation/sponsors">Our Sponsors</a></li>
             <li><a href="/foundation/individual-supporters">Individual Supporters</a></li>
             <li><a href="/foundation/leadership">Leadership</a></li>
-            <li><a href="/foundation/members.html">Members</a></li>
+            <li><a href="/foundation/members">Members</a></li>
             <li><a href="https://diversity.apache.org/" target="_blank">Diversity & Inclusion</a></li>
             <li><a href="/press/">Newsroom</a></li>
-            <li><a href="/foundation/contact.html">Contact</a></li>
+            <li><a href="/foundation/contact">Contact</a></li>
+            <li><a href="https://privacy.apache.org/policies/privacy-policy-public.html" target="_blank">Privacy Policy</a></li>
           </ul>
         </div>
 
-        <div class="col-sm-1">
-        </div>
 
       </div>
       <hr class="col-lg-12 hr-white" />

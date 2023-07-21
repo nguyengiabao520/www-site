@@ -1,5 +1,4 @@
 Title: ASF Members | Apache Software Foundation
-
 license: https://www.apache.org/licenses/LICENSE-2.0
 
 # Committed to Open Source and the ASF
@@ -38,6 +37,7 @@ This table shows current and emeritus members who have manually added themselves
 | andreww | [Andrew Wetmore](mailto:andreww@apache.org) | [Royale](https://royale.apache.org), Infra |
 | andywenk | [Andy Wenk](mailto:andywenk@apache.org) | [CouchDB](https://couchdb.apache.org), PMC |
 | angela | Angela Schreiber | [Jackrabbit](http://jackrabbit.apache.org/)|
+| ankit | Ankit Singhal | [HBase](https://hbase.apache.org), [Phoenix](http://phoenix.apache.org/), [Ratis](http://ratis.apache.org/) |
 | anshum | Anshum Gupta | [Lucene](http://lucene.apache.org/), [Solr](http://solr.apache.org/) |
 | antelder | Ant Elder |
 | antonio | [Antonio Gallardo Rivera](http://home.apache.org/~antonio/) | [Cocoon](http://cocoon.apache.org/) , [Forrest](http://forrest.apache.org/) , [Lenya](http://lenya.apache.org/)|
@@ -156,7 +156,7 @@ This table shows current and emeritus members who have manually added themselves
 | geomacy | Geoff Macartney | [Brooklyn](https://brooklyn.apache.org/)|
 | gerdogdu | [Gurkan Erdogdu](http://gurkanerdogdu.blogspot.com) | [OpenWebBeans](http://openwebbeans.apache.org)  |
 | gertv | Gert Vanthienen |
-| ggregory | Gary Gregory |
+| ggregory | Gary Gregory | [Commons](https://commons.apache.org), [HttpComponents](https://hc.apache.org/), [Logging Services](https://logging.apache.org/), [Mina](https://mina.apache.org/), [Xalan](https://xalan.apache.org/)|
 | gianugo | [Gianugo Rabellino](http://www.rabellino.it/blog/) |  [Cocoon](http://cocoon.apache.org/) ; [Xindice](http://xml.apache.org/xindice/)|
 | gk | Georg Kallidis | [Turbine](http://turbine.apache.org/) |
 | gmcdonald | [Gavin McDonald](http://16degrees.com.au) |

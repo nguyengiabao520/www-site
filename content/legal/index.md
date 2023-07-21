@@ -1,4 +1,4 @@
-Title: ASF Legal
+Title: ASF Legal & Trademark | Apache Software Foundation
 Tags: legal
 Atom: http://mail-archives.apache.org/mod_mbox/www-legal-discuss/?format=atom
 Notice: http://www.apache.org/licenses/LICENSE-2.0
@@ -32,6 +32,7 @@ The following pages provide information for Apache Software Foundation committer
 | [Source Header and Copyright Notice Policy](/legal/src-headers.html) | Instructions on the application of source headers to ASF source files |
 | [CLA FAQ](/foundation/license-faq.html) | Questions related to signing our [Contributor License Agreements](/licenses/#clas) |
 | [Handling Cryptography within an ASF Release](/dev/crypto.html) | Cryptography Policy |
+| [Generative Tooling Guidance](/legal/generative-tooling.html) | Guidance relating to the use of Generative Tooling |
 
 
 ### The Legal Affairs Committee  {#communications}

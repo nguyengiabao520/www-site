@@ -1,9 +1,7 @@
 Title: ASF Source Header and Copyright Notice Policy
 Tags: legal
 Atom: http://mail-archives.apache.org/mod_mbox/www-legal-discuss/?format=atom "ASF legal-discuss Mailing List"
-
 Comment: atom header to get a link like: "<link rel="alternate" title="ASF legal-discuss Mailing List" type="application/atom+xml" href="http://mail-archives.apache.org/mod_mbox/www-legal-discuss/?format=atom" />" in the generated html header (in the body it would be trivial)
-
 license: https://www.apache.org/licenses/LICENSE-2.0
 
 # {{title}}
@@ -82,8 +80,8 @@ This section refers only to works submitted directly to the ASF by the copyright
 
 ## NOTICE file  {#notice}
 <ol start="0">  
- <li id="notice-required">Every Apache distribution should include a NOTICE file in the top directory, along with the standard LICENSE file.</li>
- <li id="notice-text">The top of each NOTICE file should include the following text, suitably modified to reflect the product name and the year(s) 
+ <li id="notice-required">Every Apache distribution must include a NOTICE file in the top directory, along with the standard LICENSE file.</li>
+ <li id="notice-text">The top of each NOTICE file must include the following text, suitably modified to reflect the product name and the year(s) 
  of distribution of the current and past versions of the product:
 
     Apache [PRODUCT_NAME]

@@ -1,5 +1,4 @@
 Title: Our Sponsors | Apache Software Foundation
-
 license: https://www.apache.org/licenses/LICENSE-2.0
 
 # Our Sponsors
@@ -11,7 +10,7 @@ read our [sponsorship page](/foundation/sponsorship.html).
 
 ## Foundation Sponsors
 
-   <link rel="stylesheet" href="thanks.css">
+   <link rel="stylesheet" href="/css/thanks.css">
    <h3 class="h1"style="text-align: center;">Platinum Sponsors:</h3> <!-- 400x179 --> <!-- Platinum images should be exact size for CSS -->
    <div class="sponsors">
    <ul id='platinum'>
@@ -36,7 +35,6 @@ read our [sponsorship page](/foundation/sponsorship.html).
       <li><a target="_blank" rel="sponsored" href="http://www.baidu.com/"><img src="images/baidu.png"/></a><p style="text-align: center; font-weight: bold;">Baidu</p></li>
       <li><a target="_blank" rel="sponsored" href="https://www.TechAtBloomberg.com/opensource"><img src="images/bloomberg-gold.png"/></a><p style="text-align: center; font-weight: bold;">Bloomberg</p></li>
       <li><a target="_blank" rel="sponsored" href="http://cloudera.com/"><img src="images/cloudera-gold.png"/></a><p style="text-align: center; font-weight: bold;">Cloudera</p></li>
-      <li><a target="_blank" rel="sponsored" href="https://comcast.com/"><img src="images/comcast-gold.png"/></a><p style="text-align: center; font-weight: bold;">Comcast</p></li>
       <li><a target="_blank" rel="sponsored" href="https://www.confluent.io/"><img src="images/confluent-gold.png"/></a><p style="text-align: center; font-weight: bold;">Confluent</p></li>
       <li><a target="_blank" rel="sponsored" href="http://ibm.com/"><img src="images/ibm.png"/></a><p style="text-align: center; font-weight: bold;">IBM</p></li>
       <li><a target="_blank" rel="sponsored" href="https://www.indeed.com/"><img src="images/indeed.png"/></a><p style="text-align: center; font-weight: bold;">Indeed</p></li>
@@ -58,7 +56,6 @@ read our [sponsorship page](/foundation/sponsorship.html).
       <li><a target="_blank" rel="sponsored" href="https://www.didiglobal.com/"><img src="images/didi.png"/></a><p style="text-align: center; font-weight: bold;">Didi Chuxing</p></li>
       <li><a target="_blank" rel="sponsored" href="https://linecorp.com/"><img src="images/LINE-silver.png"/></a><p style="text-align: center; font-weight: bold;">LINE</p></li>
       <li><a target="_blank" rel="sponsored" href="http://www.redhat.com/"><img src="images/redhat-silver.png"/></a><p style="text-align: center; font-weight: bold;">Red Hat, Inc.</p></li>
-      <li><a target="_blank" rel="sponsored" href="https://www.replicated.com/"><img src="images/replicated-silver.png"/></a><p style="text-align: center; font-weight: bold;">Replicated</p></li>
       <li><a target="_blank" rel="sponsored" href="http://www.talend.com/"><img src="images/talend-silver.png"/></a><p style="text-align: center; font-weight: bold;">Talend</p></li>
       <li><a target="_blank" rel="sponsored" href="http://www.target.com/"><img src="images/target-silver.png"/></a><p style="text-align: center; font-weight: bold;">Target</p></li>
    </ul>
@@ -110,7 +107,7 @@ ASF Targeted Sponsors provide the Foundation with contributions for specific act
       <li><a target="_blank" rel="sponsored" href="https://jfrog.com/open-source/"><img src="images/jfrog-platinum.png"/></a><p style="text-align: center; font-weight: bold;">JFrog</p></li>
       <li><a target="_blank" rel="sponsored" href="https://microsoft.com/"><img src="images/microsoft.png"/></a><p style="text-align: center; font-weight: bold;">Microsoft</p></li>
       <li><a target="_blank" rel="sponsored" href="http://www.osuosl.org/"><img src="images/osl-logo.png"/></a><p style="text-align: center; font-weight: bold;">OSU Open Source Labs</p></li>
-      <li><a target="_blank" rel="sponsored" href="https://www.verizonmedia.com/"><img src="images/verizon_media.jpg"/></a><p style="text-align: center; font-weight: bold;">Verizon Media</p></li>
+      <li><a target="_blank" rel="sponsored" href="https://yahooinc.com/"><img src="images/yahoo-platinum.png"/></a><p style="text-align: center; font-weight: bold;">Yahoo!</p></li>
       <li><a target="_blank" rel="sponsored" href="http://www.sonatype.com/nexus/product-overview"><img src="images/sonatype-platinum.png"/></a><p style="text-align: center; font-weight: bold;">Sonatype</p></li>
       <li><a target="_blank" rel="sponsored" href="https://www.jetbrains.com/"><img src="images/jetbrains.png"/></a><p style="text-align: center; font-weight: bold;">JetBrains</p></li>
       <li><a target="_blank" rel="sponsored" href="https://fastly.com/"><img src="images/fastly-platinum.png"/></a><p style="text-align: center; font-weight: bold;">Fastly</p></li>

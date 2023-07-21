@@ -73,7 +73,7 @@ def page_generator_finalized(page_generator):
         "title": "List of page tags",
         "save_as": "pagetags.html",
         "template": 'pagetags',
-        "pagetags": pagetags,
+        "pagetags": dict(sorted(pagetags.items(), key=lambda item: item[0])), # item[0] is the key from items()
         },
         source_path = "pagetags.html", # needed by asfgenid
         )

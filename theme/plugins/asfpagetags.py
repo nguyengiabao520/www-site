@@ -98,7 +98,7 @@ def addPage(pageGenerator, tagn, pages):
         "title": tagn,
         "save_as": f"_{tagn}.html", # use prefix to reduce chance of clash with normal pages
         "template": 'pagetag',
-        "taggedpages": pages,
+        "taggedpages": sorted(pages, key=lambda item: item.title), # sort by page title
         },
         source_path = f"{tagn}.html", # needed by asfgenid
     )

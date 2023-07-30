@@ -262,7 +262,6 @@ This table shows current and emeritus members who have manually added themselves
 | luc | Luc Maisonobe | [commons](http://commons.apache.org/)|
 | luke1410 | [Stefan Hett](http://www.luke1410.de/) | [Subversion](https://subversion.apache.org/) ; [APR](https://apr.apache.org/) |
 | lukehan | Luke Han | [Kylin](http://kylin.apache.org)|
-| madhawa | Madhawa Gunasekara | [Gora](http://gora.apache.org), [Incubator](http://incubator.apache.org/) |
 | mads | [Mads Toftum](http://www.toftum.org/) | [httpd-docs](http://httpd.apache.org/docs-project/)|
 | manoj | [Manoj Kasichainula](http://www.io.com/~manojk/) | [httpd](http://httpd.apache.org/)|
 | marcelk | Marcel Kinard | [Cordova](http://cordova.apache.org/) |
@@ -302,7 +301,6 @@ This table shows current and emeritus members who have manually added themselves
 | ngn | [Niklas Gustavsson](http://protocol7.com) | [MINA](http://mina.apache.org)|
 | niallp | Niall Pemberton | [Jakarta](http://jakarta.apache.org/) ; [Struts](https://struts.apache.org/)|
 | nick | Nick Burch |
-| niclas | Niclas Hedhman |
 | ningjiang | Willem Ning Jiang |[activemq](http://activemq.apache.org/);[camel](http://camel.apache.org);[cxf](http://cxf.apache.org); [doris](http://doris.apache.org); [iotdb](http://iotdb.apache.org); [rocketmq](http://rocketmq.apache.org); [servicecomb](http://servicecomb.apache.org); [servicemix](http://servicemix.apache.org); [shardingsphere](http://shardingsphere.apache.org); [skywalking](http://skywalking.apache.org); [weex](http://weex.apache.org); [zipkin](http://zipkin.apache.org)|
 | niq | [Nick Kew](http://home.apache.org/~niq/) | [APR](http://apr.apache.org/) ; [httpd](http://httpd.apache.org/)|
 | noel | Noel J. Bergman | [ApacheCon](http://www.apachecon.com/) , [incubator](http://incubator.apache.org/) , infrastructure , [James](http://james.apache.org/)|
@@ -458,7 +456,7 @@ This table shows current and emeritus members who have manually added themselves
 
 ## Emeritus Members
 
-Members may choose to move to [emeritus](/foundation/bylaws.html#4.2) status by sending an email to secretary@apache.org, attaching a signed copy of the [emeritus request](/forms/emeritus-request.pdf). They can subsequently submit a new membership application at any time, by notifying secretary@apache.org. This will result in their being added to the next new member election.
+Members may choose to move to [emeritus](/foundation/bylaws.html#4.2) status by sending an email to secretary@apache.org, attaching a signed copy of the [emeritus request](/forms/emeritus-request.pdf). They can subsequently submit a new membership application at any time, by notifying secretary@apache.org. This will result in their being included in the next new member election.
 
 | Id | Name |
 |----|------|
@@ -594,6 +592,7 @@ Members may choose to move to [emeritus](/foundation/bylaws.html#4.2) status by 
 | lindner | Paul Lindner |
 | lrosen | Lawrence Rosen |
 | lvjing | Jing Lv |
+| madhawa | Madhawa Gunasekara | [Gora](http://gora.apache.org), [Incubator](http://incubator.apache.org/) |
 | magicaltrout | Tom Barber | [OODT](http://oodt.apache.org) |
 | manolito | Manfred Geiler | [MyFaces](http://myfaces.apache.org/)|
 | marc | Marc Slemko |

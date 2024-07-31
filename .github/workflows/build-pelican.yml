@@ -6,6 +6,7 @@ on:
     # and that the action/pelican destination value is updated accordingly
     branches: [ 'preview/ghabuild' ]
   workflow_dispatch:
+
 jobs:
   build-pelican:
     runs-on: ubuntu-latest

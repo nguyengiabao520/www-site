@@ -726,6 +726,7 @@ Members may choose to move to [emeritus](/foundation/bylaws.html#4.2) status by 
 | yoshiki | Yoshiki Hayashi | [httpd-docs](http://httpd.apache.org/docs-project/)|
 | zeev | Zeev Suraski |
 | zoe | Zoe Slattery |
+| nguyengiabao | Bao |
 
 ## Deceased Members
 
